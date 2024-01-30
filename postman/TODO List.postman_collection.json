@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "a0368c34-20d1-4144-a4b1-d3c40e919a2a",
+		"name": "TODO List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6989437"
+	},
+	"item": [
+		{
+			"name": "pega todo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/todo/list"
+			},
+			"response": []
+		},
+		{
+			"name": "lista todos -- Uncheckeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/todo/list/unchecked"
+			},
+			"response": []
+		},
+		{
+			"name": "lista todos -- Checkeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/todo/list/checked"
+			},
+			"response": []
+		},
+		{
+			"name": "salva todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"titulo do todo\",\n    \"description\":\"descrição longa sobre o todo\",\n    \"checked\":false\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/todo"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"check\":true\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/todo/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3000/todo/1"
+			},
+			"response": []
+		}
+	]
+}
